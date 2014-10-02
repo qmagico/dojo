@@ -26,6 +26,10 @@
 	</style>
 	</head>
 	<body ng-app="jogo_da_vida_app" ng-controller="GameController">
+		<h3>Jogo da vida desenvolvido no QDojo do dia 01 de outubro de 2014</h3>
+		<p>Clique nas células antes de começar | verde = viva, vermelho = morta</p>
+		<p>Para começar clique no botão <button ng-click="start()">Começa</button></p>
+		
 		<div class="container">
 			<div ng-repeat="line in matrix track by $index"
 				ng-click="getLine($index)">
@@ -39,6 +43,5 @@
 			<p>Vivos: {{ getLives(true) }}</p>
 			<p>Mortos: {{ getLives(false) }}</p>
 		</div>
-		<button ng-click="start()">Começa</button>
 	</body>
 </html>

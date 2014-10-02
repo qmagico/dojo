@@ -11,7 +11,7 @@ mod.controller("GameController", function($scope, $interval){
 		$scope.matrix[i] = new Array(n);
 	}
 
-	var u = undefined;
+	var u;
 
 	var minimal = [
 			[u, 1, u], 
@@ -34,8 +34,8 @@ mod.controller("GameController", function($scope, $interval){
 		}
 	};
 
-	// applyPattern(minimal, 0, 0);
-	// applyPattern(accorn, 20, 20);
+	//applyPattern(minimal, 0, 0);
+	applyPattern(accorn, 20, 20);
 
 
 	$scope.muda = function(){
