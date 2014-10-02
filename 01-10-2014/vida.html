@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script src="vida.js"></script>
+	<style type="text/css">
+	.container {
+		width: 500px;
+		margin: 20px auto;
+	}
+	.square {
+		width: 8px;
+		height: 8px;
+		float: left;
+		margin: 1px;
+		background: #c1c1c1;
+	}
+
+	.dead {
+		background: #fabdb8;
+	}
+
+	.alive {
+		background: green;
+	}
+	</style>
+	</head>
+	<body ng-app="jogo_da_vida_app" ng-controller="GameController">
+		<div class="container">
+			<div ng-repeat="line in matrix track by $index"
+				ng-click="getLine($index)">
+				<div class="square" 
+					ng-click="getColumn($index)"
+					ng-class="{dead: item === false, alive: item === true}" 
+					ng-repeat="item in line track by $index" ng-model="line[$index]"></div>
+			</div>
+
+			<p>Gera&ccedil;&otilde;es: {{ generations }}</p>
+			<p>Vivos: {{ getLives(true) }}</p>
+			<p>Mortos: {{ getLives(false) }}</p>
+		</div>
+		<button ng-click="start()">Começa</button>
+	</body>
+</html>
