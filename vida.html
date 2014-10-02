@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script src="vida.js"></script>
+	<style type="text/css">
+	.container {
+		width: 500px;
+		margin: 20px auto;
+	}
+	.square {
+		width: 8px;
+		height: 8px;
+		float: left;
+		margin: 1px;
+	}
+
+	.inative {
+		background: #c1c1c1;
+	}
+
+	.dead {
+		background: #fabdb8;
+	}
+
+	.alive {
+		background: green;
+	}
+	</style>
+	</head>
+	<body ng-app="GameOfLifeApp" ng-controller="GameController">
+		<div class="container">
+			<div ng-repeat="line in matrix track by $index">
+				<div class="square" ng-class="{inative: item === undefined, dead: item === false, alive: item === true}" ng-repeat="item in line track by $index" ng-model="item"></div>
+			</div>
+		</div>
+		<!-- <button ng-click="muda()">Muda \o/</button> -->
+	</body>
+</html>
