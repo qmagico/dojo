@@ -8,32 +8,30 @@ def teclado(frase)
         " "=> "0"}
 
     result = ""
-
-    if frase.upcase == frase and not ['', ' '].include?(frase) 
-        result = "**"
-        frase.split("").each_with_index { |letra, index|
-            caracteres_na_mesma_tecla = result[-1] == teclas[frase[index].upcase][0]
-            if (index != 0 && caracteres_na_mesma_tecla)
-                result += "_"
-            end
-            result += teclas[letra]
-        }
-    else
-        frase.split("").each_with_index { |letra, index|
-            caracteres_na_mesma_tecla = result[-1] == teclas[frase[index].upcase][0]
-            if (index != 0 && caracteres_na_mesma_tecla)
-                result += "_"
-            end
-
-            if (teclas[letra] && letra != " ")
-                result += "*" + teclas[letra]
-            else
-                tecla_upper = letra.upcase
-                result += teclas[tecla_upper]
-            end
-        }
+    def has_spaces?(frase)
+      frase.upcase == frase and not ['', ' '].include?(frase)
     end
 
+    if has_spaces?(frase)
+      result = "**"
+    end
+
+    frase.split("").each_with_index { |letra, index|
+        caracteres_na_mesma_tecla = result[-1] == teclas[frase[index].upcase][0]
+        if (index != 0 && caracteres_na_mesma_tecla)
+            result += "_"
+        end
+        if has_spaces?(frase)
+          result += teclas[letra]
+        else
+          if (teclas[letra] && letra != " ")
+            result += "*" + teclas[letra]
+          else
+            tecla_upper = letra.upcase
+            result += teclas[tecla_upper]
+          end
+        end
+    }
     result
 end
 
