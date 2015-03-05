@@ -1,5 +1,9 @@
 # Aprendizados
 
+## Problema
+
+ [Um mundo pequeno](http://dojopuzzles.com/problemas/exibe/um-mundo-pequeno/)
+
 ## Participantes
 
 * Bustamante
