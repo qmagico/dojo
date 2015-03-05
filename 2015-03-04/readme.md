@@ -1,5 +1,16 @@
 # Aprendizados
 
+## Participantes
+
+* Bustamante
+* Iury
+* Zorak
+* Luiz
+* Roger
+* Erle 
+* Lucas Rogério
+* Dinesh
+
 ## Coisas boas
 
 * Discussão legal da lógica
