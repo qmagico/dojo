@@ -13,18 +13,18 @@ Hugo
 ## Coisas boas
 
 
-python tem muita coisa implicita - açucar sintático
-boas funcoes inclusas
-café tava bom
-list comprehension
-unpacking
-funcao zip
-gente nova (Clayton, João)
+* python tem muita coisa implicita - açucar sintático
+* boas funcoes inclusas
+* café tava bom
+* list comprehension
+* unpacking
+* funcao zip
+* gente nova (Clayton, João)
 
 
 ## coisas Ruins
 
-ler entrada
-o exercicio nao passou em todos os casos
-nao sabemos matematica
-problema nao é tão fácil quanto parece
+* ler entrada
+* o exercicio nao passou em todos os casos
+* nao sabemos matematica
+* problema nao é tão fácil quanto parece
